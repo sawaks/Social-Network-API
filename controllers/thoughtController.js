@@ -69,7 +69,7 @@ module.exports = {
       .then((user) =>
         !user
           ? res.status(404).json({
-            message: 'Thought created but no user with this id!',
+            message: 'Thought deleted but no user with this id!',
           })
           : res.json({ message: 'Thought successfully deleted!' })
       )
@@ -91,6 +91,10 @@ module.exports = {
   },
   // remove a reaction
   removeReaction(req, res) {
+    console.log("thoughtId");
+    console.log(req.params.thoughtId);
+    console.log("reactionId");
+    console.log(req.params.reactionId)
     Thought.findOneAndUpdate(
       { _id: req.params.thoughtId },
       { $pull: { reactions: { reactionId: req.params.reactionId } } },

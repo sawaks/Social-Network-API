@@ -52,7 +52,7 @@ module.exports = {
       .then(() => res.json({ message: 'User and associated thoughts deleted!' }))
       .catch((err) => res.status(500).json(err));
   },
-  // addFriend method
+  // addFriend method 	"_id": "648d8a56d07dc6d33da2af96"
   addFriend(req, res) {
     User.findOneAndUpdate(
       { _id: req.params.userId },
@@ -66,11 +66,11 @@ module.exports = {
       )
       .catch((err) => res.status(500).json(err));
   },
-  //  removeFriend method
+  //  removeFriend method 	
   removeFriend(req, res) {
     User.findOneAndUpdate(
       { _id: req.params.userId },
-      { $pull: { friends: { friendId: req.params.friendId } } },
+      { $pull: { friends: req.params.friendId } },
       { runValidators: true, new: true }
     )
       .then((user) =>
