@@ -81,20 +81,20 @@ const dbUsers = [
   {
     username: "lernantino",
     email: "lernantino@gmail.com",
-    thoughts: [],
+    thoughts: [dbThoughts[2]],
     friends: [],
 
   },
   {
     username: "sawako",
     email: "sawako@gmail.com",
-    thoughts: [],
+    thoughts: [dbThoughts[0]],
     friends: [],
   },
   {
     username: "junior",
     email: "junior@gmail.com",
-    thoughts: [],
+    thoughts: [dbThoughts[1]],
     friends: [],
   },
 ];

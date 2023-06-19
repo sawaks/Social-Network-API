@@ -13,9 +13,10 @@ connection.once('open', async () => {
   const thoughts = dbThoughts;
   const reactions = dbReactions;
 
+  await Thought.collection.insertMany(thoughts, reactions);
+
   await User.collection.insertMany(users);
 
-  await Thought.collection.insertMany(thoughts, reactions);
 
   // loop through the saved applications, for each application we need to generate a application response and insert the application responses
   console.table(users);
