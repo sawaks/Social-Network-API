@@ -25,4 +25,4 @@ This project is the proof that I learned through week 18. This application is a
 https://github.com/sawaks/Social-Network-API.git
 
 ## A walkthrough video Link
-https://drive.google.com/file/d/1Bo7ZJgpI7KG1MyJhT2zEDf_cpDswLqyl/view
+https://watch.screencastify.com/v/T2oa2HFt5UwSYGYwWRTR
